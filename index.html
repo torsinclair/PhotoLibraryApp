@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>
+
+      Photo Library App
+
+  </title>
+  <link href='css/bootstrap.min.css' rel='stylesheet'>
+  <link href='css/main.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <div class='container'>
+
+      <div class='row'>
+        <div class='col-md-12'>
+          <h3>Photo Library App</h3>
+      </div>
+  </div>
+
+
+  <div class='row'>
+    <div class='col-md-4 list-area'>  
+    </div>
+
+    <div class='col-md-8 photo-area'>
+      <img src='assets/Mountain.png' alt='Mountain Placement' />
+  </div>
+</div>
+
+<!-- Libraries -->
+<script src="bower_components/jquery/jquery.min.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+
+
+<script src="data/data.js"></script>
+
+<!-- Models -->
+<script src="models/PhotoModel.js"></script>
+<script src="collections/Photos.js"></script>
+<script src="collections/SongQueue.js"></script>
+<script src="models/AppModel.js"></script>
+
+<!-- Views -->
+<script src="views/PlayerView.js"></script>
+<script src="views/LibraryView.js"></script>
+<script src="views/LibraryEntryView.js"></script>
+<script src="views/SongQueueView.js"></script>
+<script src="views/SongQueueEntryView.js"></script>
+<script src="views/AppView.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
