@@ -8,6 +8,9 @@ var AppModel = Backbone.Model.extend({
 
   params.library.on('enqueue', function(photo) {
     this.get('photoQueue').add(photo);
+
+    console.log(this.get('photoQueue'));
+    
   }, this);
 
   }

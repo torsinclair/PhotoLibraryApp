@@ -12,7 +12,7 @@ var PhotoQueueView = Backbone.View.extend({
 
     this.$el.children().detach();
 
-    this.$el.html('<th>Photo Photo Photo</th>').append(
+    this.$el.html('<th>Image View</th>').append(
       this.collection.map(function(photo) {
         return new PhotoQueueEntryView({model: photo}).render();
       })

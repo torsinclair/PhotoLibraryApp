@@ -8,7 +8,7 @@ var PhotoQueue = Photos.extend({
       console.log(this.at(0));
       console.log(this.length);
 
-   
+
       
 
       }
@@ -18,6 +18,8 @@ var PhotoQueue = Photos.extend({
         // if > 1 (more than default image) dequeue
           // this.at(1).view()
       }),
+
+    this.on('enqueue')
 
     this.on('dequeue', function(photo) {
       this.remove(photo);
