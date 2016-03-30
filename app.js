@@ -1,49 +1,45 @@
 var photoData = [
-  {
-      title: "Norway-Lofoten",
-      caption: "Fishing Village Lofoten",
-      image: "http://www.lofoten.info/sites/l/lofoten.info/files/fbe615c576d00cb62fce97742998dec8.JPG"
-  },
-  {
-      title: "Norway-Lofoten",
-      caption: "View From Water",
-      image: "http://www.lofoten-info.no/Aa-hamna/Cabins%20in%20A%201.jpg"
-  },
-  {
-      title: "Norway-Lofoten",
-      caption: "Winter",
-      image: "https://www.norrona.com/Global/04_Norr%C3%B8na%20Magazine/Lofoten-%20a%20love%20story/lofoten%20a%20love%20story_normal-4.jpg"
-  },
-  {
-      title: "Norway-Lofoten",
-      caption: "Northern Lights",
-      image: "https://res-4.cloudinary.com/simpleview/image/upload/v1/clients/norway/northern_lights_moskenes_lofoten_norway_2_1_bc7aac29-4a57-437c-b848-838f0a7f43ff.jpg"
-  },
-  {
-      title: "Norway-Lofoten",
-      caption: "View From Top",
-      image: "http://www.68north.com/content/2013/12/lofoten-03-bunes-beach.jpg"
-  }
-];
-
-var backDrop = [
+{      
+      title: "Norway",
+      caption: "Low tide at Olstinden by Douglas Stratton",
+      rating: '',
+      orderCount: 1,
+      image: "https://drscdn.500px.org/photo/81913125/m%3D2048/d6926aeb94599899fc9e76fce241ff94"
+},
 {
-      title: "",
-      caption: "",
-      image: "assets/Mountain.png"
+      title: "Maui",
+      caption: "Makena Cove, Maui. Let's go to the beach!",
+      rating: '',
+      orderCount: 2,
+      image: "http://assets.fodors.com/destinations/4636/beach-makena-cove-south-shore-maui-maui-hawaii-usa_main.jpg"
+
+},
+{
+      title: "Tufa",
+      caption: "Tufa at Night by Romain Guy",
+      rating: '',
+      orderCount: 3,
+      image: "https://lh3.googleusercontent.com/-YifreVFp77c/UMoTI_wpC6I/AAAAAAAAMRw/6VACc_ubeaU/w2048-h1312/Tufa%2Bat%2BNight.jpg"
+},
+{
+      title: "Lost Island",
+      caption: "Lost Island, San Gregorio, by Romain Guy",
+      rating: '',
+      orderCount: 4,
+      image: "https://lh3.googleusercontent.com/-7WqXcxOUVVA/VW1ct0NIx1I/AAAAAAAAQKE/GUcb_c0UAzc/w1719-h1149-no/Lost%2BIsland.jpg"
+},
+{
+      title: "Winter Scene",
+      caption: "Winter is coming, somewhere",
+      rating: '',
+      orderCount: 5,
+      image: "http://buzzerg.com/wp-content/uploads/8589130444382-winter-landscape-wallpaper-hd.jpg"  
 }
 ];
 
+var library = new Photos(photoData);
 
-        var list = new Photos(photoData);
+var app = new AppModel({library: library});
 
-        var app = new AppModel({list: list});
-
-        var appView = new AppView({model: app});
-
-        
-        //var picView = new PicView({model: app})
-
-
-
+var appView = new AppView({model: app});
 

@@ -2,16 +2,14 @@ var AppModel = Backbone.Model.extend({
 
   initialize: function(params) {
 
-    this.set('photos', params.list.models);
+    this.set('currentPhoto', new Photo());
+    this.set('photoQueue', new PhotoQueue());
+  
 
-    params.list.on('clicked', function(imageModel) {
-    this.set('currentPhoto', imageModel);
-    }, this);
+  params.library.on('enqueue', function(photo) {
+    this.get('photoQueue').add(photo);
+  }, this);
 
-    params.list.on('add', function(imageModel) {
-       this.set('currentPhoto', imageModel);
-    }, this);
   }
 
-});
-
+})

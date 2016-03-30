@@ -1,15 +1,18 @@
 var AppView = Backbone.View.extend({
 
-  initialize: function() {
-    this.listView = new ListView({collection: this.model.get('list')});
-    
+  initialize: function(params) {
+
+    this.libraryView = new LibraryView({collection: this.model.get('library')});
+    this.photoQueueView = new PhotoQueueView({collection: this.model.get('photoQueue')});
+
     
   },
 
   render: function() {
-    return this.$el.append([
-      this.listView.$el,
-    ]);
+      return this.$el.html([
+      this.libraryView.$el,
+      this.photoQueueView.$el
+      ]);
   }
-});
 
+});

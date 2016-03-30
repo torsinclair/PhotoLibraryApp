@@ -1,3 +1,15 @@
 body {
   background-color: aliceblue;
 }
+
+img {
+  width: 100%;
+}
+
+.photo {
+  height: 40px;
+}
+
+.photo-area {
+  text-align: center;
+}

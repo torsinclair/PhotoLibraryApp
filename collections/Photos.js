@@ -1,11 +1,18 @@
-// Songs.js - Defines a backbone collection class for songs.
 var Photos = Backbone.Collection.extend({
 
-  model: PhotoModel,
+  model: Photo,
 
 
-  // initialize: function() {
-  //   new ListView({model: this});
-  // }
+  enqueue: function() {
+    this.trigger('enqueue', this);
+  },
+
+  dequeue: function() {
+    this.trigger('dequeue', this);
+  }
 
 });
+
+
+
+
