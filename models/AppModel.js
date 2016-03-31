@@ -7,9 +7,15 @@ var AppModel = Backbone.Model.extend({
   
 
   params.library.on('enqueue', function(photo) {
+    
+    console.log(this.get('photoQueue'));
+
     this.get('photoQueue').add(photo);
 
-    console.log(this.get('photoQueue'));
+    // if( this.attributes.photoQueue.length ){
+    //   var photo = (this.attributes.photoQueue.models[0]);
+    //   this.attributes.photoQueue.remove(photo);
+    // }
     
   }, this);
 

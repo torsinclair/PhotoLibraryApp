@@ -9,15 +9,11 @@ var LibraryEntryView = Backbone.View.extend({
   template: _.template('<td><%= title %></td>'),
 
   events: {
-    'click': function() {
+    'click': 'broadcastClick'
+  },
 
-      var orderCountInstance = 1;
-
-      this.model.set('orderCount', orderCountInstance);
-      this.model.enqueue();
-
-      orderCountInstance++;
-    }
+  broadcastClick: function() {
+    this.model.updateView();
   },
 
   render: function() {
